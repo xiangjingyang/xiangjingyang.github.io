@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>爱心</title> <!-- 这是网页标题-->
+    <title>呆呆和杨宝</title> <!-- 这是网页标题-->
     <style>
         body {
             overflow: hidden;
@@ -12,14 +12,14 @@
 
         h1 {
             position: fixed;
-            top: 50%;
+            top: 40%;
             left: 0;
             width: 100%;
             text-align: center;
             transform: translateY(-50%);
             font-family: 'Love Ya Like A Sister', cursive;
             font-size: 40px;
-            color: #e2314f;
+            color: #3f0606;
             padding: 0 20px;
         }
 
@@ -150,7 +150,15 @@
             var hour = parseInt(time / 3600) - 24 * day;
             var minute = parseInt((time % 3600) / 60);
             var second = parseInt(time % 60);
-            <!-- obj.innerHTML = "...." + day + "." + hour + "." + minute + "." + second; -->
+
+            n = new Date();
+            y = n.getFullYear();
+            m = n.getMonth() + 1;
+            d = n.getDate();
+            
+            var timetoday = nowtime / 1000;
+            var daytoday = parseInt(timetoday / 86400);
+            obj.innerHTML = "今天是"+y+"."+m+"."+d+",<br> <br>" + "呆呆和杨宝已经在一起：<br>" + day + "天" + hour + "小时" + minute + "分钟" + second + "秒啦～" + "<br> <br> 杨宝20岁生日快乐!";
 
             return true;
         }
